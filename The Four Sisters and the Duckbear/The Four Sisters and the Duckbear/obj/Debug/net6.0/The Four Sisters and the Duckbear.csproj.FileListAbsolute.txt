@@ -1,0 +1,14 @@
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.AssemblyInfoInputs.cache
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.AssemblyInfo.cs
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.csproj.CoreCompileInputs.cache
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\bin\Debug\net6.0\The Four Sisters and the Duckbear.exe
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\bin\Debug\net6.0\The Four Sisters and the Duckbear.deps.json
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\bin\Debug\net6.0\The Four Sisters and the Duckbear.runtimeconfig.json
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\bin\Debug\net6.0\The Four Sisters and the Duckbear.dll
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\bin\Debug\net6.0\The Four Sisters and the Duckbear.pdb
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.dll
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\refint\The Four Sisters and the Duckbear.dll
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.pdb
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\The Four Sisters and the Duckbear.genruntimeconfig.cache
+D:\Repos\The Four Sisters and the Duckbear\The Four Sisters and the Duckbear\obj\Debug\net6.0\ref\The Four Sisters and the Duckbear.dll

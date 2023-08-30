@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "The Four Sisters and the Duckbear/1.0.0": {
+        "runtime": {
+          "The Four Sisters and the Duckbear.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "The Four Sisters and the Duckbear/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,14 @@
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.AssemblyInfoInputs.cache
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.AssemblyInfo.cs
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.csproj.CoreCompileInputs.cache
+D:\Repos\The Triangle Farmer\The Triangle Farmer\bin\Debug\net6.0\The Triangle Farmer.exe
+D:\Repos\The Triangle Farmer\The Triangle Farmer\bin\Debug\net6.0\The Triangle Farmer.deps.json
+D:\Repos\The Triangle Farmer\The Triangle Farmer\bin\Debug\net6.0\The Triangle Farmer.runtimeconfig.json
+D:\Repos\The Triangle Farmer\The Triangle Farmer\bin\Debug\net6.0\The Triangle Farmer.dll
+D:\Repos\The Triangle Farmer\The Triangle Farmer\bin\Debug\net6.0\The Triangle Farmer.pdb
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.dll
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\refint\The Triangle Farmer.dll
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.pdb
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\The Triangle Farmer.genruntimeconfig.cache
+D:\Repos\The Triangle Farmer\The Triangle Farmer\obj\Debug\net6.0\ref\The Triangle Farmer.dll

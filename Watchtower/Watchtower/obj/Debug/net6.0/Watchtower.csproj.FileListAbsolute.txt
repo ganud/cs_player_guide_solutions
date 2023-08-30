@@ -1,0 +1,14 @@
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\bin\Debug\net6.0\Watchtower.exe
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\bin\Debug\net6.0\Watchtower.deps.json
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\bin\Debug\net6.0\Watchtower.runtimeconfig.json
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\bin\Debug\net6.0\Watchtower.dll
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\bin\Debug\net6.0\Watchtower.pdb
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.AssemblyInfoInputs.cache
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.AssemblyInfo.cs
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.csproj.CoreCompileInputs.cache
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.dll
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\refint\Watchtower.dll
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.pdb
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\Watchtower.genruntimeconfig.cache
+D:\Repos\C# Player's Guide\Watchtower\Watchtower\obj\Debug\net6.0\ref\Watchtower.dll

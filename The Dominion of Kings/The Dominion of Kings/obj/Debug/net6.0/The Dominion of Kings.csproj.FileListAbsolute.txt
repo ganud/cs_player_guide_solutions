@@ -1,0 +1,14 @@
+D:\Repos\The Dominion of Kings\The Dominion of Kings\bin\Debug\net6.0\The Dominion of Kings.exe
+D:\Repos\The Dominion of Kings\The Dominion of Kings\bin\Debug\net6.0\The Dominion of Kings.deps.json
+D:\Repos\The Dominion of Kings\The Dominion of Kings\bin\Debug\net6.0\The Dominion of Kings.runtimeconfig.json
+D:\Repos\The Dominion of Kings\The Dominion of Kings\bin\Debug\net6.0\The Dominion of Kings.dll
+D:\Repos\The Dominion of Kings\The Dominion of Kings\bin\Debug\net6.0\The Dominion of Kings.pdb
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.AssemblyInfoInputs.cache
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.AssemblyInfo.cs
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.csproj.CoreCompileInputs.cache
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.dll
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\refint\The Dominion of Kings.dll
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.pdb
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\The Dominion of Kings.genruntimeconfig.cache
+D:\Repos\The Dominion of Kings\The Dominion of Kings\obj\Debug\net6.0\ref\The Dominion of Kings.dll

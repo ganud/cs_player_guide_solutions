@@ -1,0 +1,14 @@
+D:\Repos\The Defense of Consolas\The Defense of Consolas\bin\Debug\net6.0\The Defense of Consolas.exe
+D:\Repos\The Defense of Consolas\The Defense of Consolas\bin\Debug\net6.0\The Defense of Consolas.deps.json
+D:\Repos\The Defense of Consolas\The Defense of Consolas\bin\Debug\net6.0\The Defense of Consolas.runtimeconfig.json
+D:\Repos\The Defense of Consolas\The Defense of Consolas\bin\Debug\net6.0\The Defense of Consolas.dll
+D:\Repos\The Defense of Consolas\The Defense of Consolas\bin\Debug\net6.0\The Defense of Consolas.pdb
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.AssemblyInfoInputs.cache
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.AssemblyInfo.cs
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.csproj.CoreCompileInputs.cache
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.dll
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\refint\The Defense of Consolas.dll
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.pdb
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\The Defense of Consolas.genruntimeconfig.cache
+D:\Repos\The Defense of Consolas\The Defense of Consolas\obj\Debug\net6.0\ref\The Defense of Consolas.dll
