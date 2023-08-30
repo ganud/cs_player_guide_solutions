@@ -1,0 +1,1 @@
+This repository is to document my progress on the The C# Player's Guide (5th Edition) by RB Whitaker.
