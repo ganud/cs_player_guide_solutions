@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\bin\Debug\net6.0\The Replicator of D’To.exe
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\bin\Debug\net6.0\The Replicator of D’To.deps.json
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\bin\Debug\net6.0\The Replicator of D’To.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\bin\Debug\net6.0\The Replicator of D’To.dll
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\bin\Debug\net6.0\The Replicator of D’To.pdb
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.dll
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\refint\The Replicator of D’To.dll
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.pdb
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\The Replicator of D’To.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\The Replicator of D’To\The Replicator of D’To\obj\Debug\net6.0\ref\The Replicator of D’To.dll
