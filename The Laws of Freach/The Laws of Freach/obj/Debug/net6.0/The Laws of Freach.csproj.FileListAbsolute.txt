@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\bin\Debug\net6.0\The Laws of Freach.exe
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\bin\Debug\net6.0\The Laws of Freach.deps.json
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\bin\Debug\net6.0\The Laws of Freach.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\bin\Debug\net6.0\The Laws of Freach.dll
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\bin\Debug\net6.0\The Laws of Freach.pdb
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.dll
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\refint\The Laws of Freach.dll
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.pdb
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\The Laws of Freach.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\The Laws of Freach\The Laws of Freach\obj\Debug\net6.0\ref\The Laws of Freach.dll
