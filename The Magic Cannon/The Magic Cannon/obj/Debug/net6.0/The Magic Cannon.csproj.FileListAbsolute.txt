@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\bin\Debug\net6.0\The Magic Cannon.exe
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\bin\Debug\net6.0\The Magic Cannon.deps.json
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\bin\Debug\net6.0\The Magic Cannon.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\bin\Debug\net6.0\The Magic Cannon.dll
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\bin\Debug\net6.0\The Magic Cannon.pdb
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.dll
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\refint\The Magic Cannon.dll
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.pdb
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\The Magic Cannon.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\The Magic Cannon\The Magic Cannon\obj\Debug\net6.0\ref\The Magic Cannon.dll
