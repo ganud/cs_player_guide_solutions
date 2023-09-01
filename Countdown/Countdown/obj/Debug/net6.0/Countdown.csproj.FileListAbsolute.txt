@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\bin\Debug\net6.0\Countdown.exe
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\bin\Debug\net6.0\Countdown.deps.json
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\bin\Debug\net6.0\Countdown.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\bin\Debug\net6.0\Countdown.dll
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\bin\Debug\net6.0\Countdown.pdb
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.dll
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\refint\Countdown.dll
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.pdb
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\Countdown.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\Countdown\Countdown\obj\Debug\net6.0\ref\Countdown.dll
