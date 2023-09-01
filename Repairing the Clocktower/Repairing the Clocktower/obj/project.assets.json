@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\Repairing the Clocktower\\Repairing the Clocktower\\Repairing the Clocktower.csproj",
+      "projectUniqueName": "D:\\Repos\\cs_player_guide_solutions\\Repairing the Clocktower\\Repairing the Clocktower\\Repairing the Clocktower.csproj",
       "projectName": "Repairing the Clocktower",
-      "projectPath": "D:\\Repos\\Repairing the Clocktower\\Repairing the Clocktower\\Repairing the Clocktower.csproj",
+      "projectPath": "D:\\Repos\\cs_player_guide_solutions\\Repairing the Clocktower\\Repairing the Clocktower\\Repairing the Clocktower.csproj",
       "packagesPath": "C:\\Users\\Alvin\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\Repairing the Clocktower\\Repairing the Clocktower\\obj\\",
+      "outputPath": "D:\\Repos\\cs_player_guide_solutions\\Repairing the Clocktower\\Repairing the Clocktower\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alvin\\AppData\\Roaming\\NuGet\\NuGet.Config",

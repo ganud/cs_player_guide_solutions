@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\bin\Debug\net6.0\Taking a Number.exe
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\bin\Debug\net6.0\Taking a Number.deps.json
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\bin\Debug\net6.0\Taking a Number.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\bin\Debug\net6.0\Taking a Number.dll
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\bin\Debug\net6.0\Taking a Number.pdb
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.dll
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\refint\Taking a Number.dll
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.pdb
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\Taking a Number.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\Taking a Number\Taking a Number\obj\Debug\net6.0\ref\Taking a Number.dll

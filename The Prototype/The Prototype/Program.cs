@@ -2,17 +2,31 @@
 
 int guessedNumber = -1;
 int targetNumber = 0;
-do
+int AskForNumber(string text)
 {
-    Console.Write("User 1, enter a number between 0 and 100: ");
-    targetNumber = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(text);
+    int converted = Convert.ToInt32(Console.ReadLine());
+    return converted;
 }
-while (targetNumber < 0 || targetNumber > 100);
+
+int AskForNumberInRange(string text, int min, int max)
+{
+    int input = -1;
+    do
+    {
+        input = AskForNumber(text);
+    }
+    while (input < min || max < input);
+    return input;
+}
+
+
+
+AskForNumberInRange("User 1, enter a number between 0 and 100: ", 0, 100);
 Console.Clear();
 do
 {
-    Console.Write("What is your guess?: ");
-    guessedNumber = Convert.ToInt32(Console.ReadLine());
+    guessedNumber = AskForNumber("What is your guess?: ");
     if (guessedNumber > targetNumber)
     {
         Console.WriteLine("Too high");

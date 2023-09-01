@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\C# Player's Guide\\The Prototype\\The Prototype\\The Prototype.csproj": {}
+    "D:\\Repos\\cs_player_guide_solutions\\The Prototype\\The Prototype\\The Prototype.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\C# Player's Guide\\The Prototype\\The Prototype\\The Prototype.csproj": {
+    "D:\\Repos\\cs_player_guide_solutions\\The Prototype\\The Prototype\\The Prototype.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\C# Player's Guide\\The Prototype\\The Prototype\\The Prototype.csproj",
+        "projectUniqueName": "D:\\Repos\\cs_player_guide_solutions\\The Prototype\\The Prototype\\The Prototype.csproj",
         "projectName": "The Prototype",
-        "projectPath": "D:\\Repos\\C# Player's Guide\\The Prototype\\The Prototype\\The Prototype.csproj",
+        "projectPath": "D:\\Repos\\cs_player_guide_solutions\\The Prototype\\The Prototype\\The Prototype.csproj",
         "packagesPath": "C:\\Users\\Alvin\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\C# Player's Guide\\The Prototype\\The Prototype\\obj\\",
+        "outputPath": "D:\\Repos\\cs_player_guide_solutions\\The Prototype\\The Prototype\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
