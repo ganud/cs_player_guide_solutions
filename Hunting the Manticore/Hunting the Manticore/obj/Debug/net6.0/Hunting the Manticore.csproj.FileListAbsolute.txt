@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\bin\Debug\net6.0\Hunting the Manticore.exe
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\bin\Debug\net6.0\Hunting the Manticore.deps.json
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\bin\Debug\net6.0\Hunting the Manticore.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\bin\Debug\net6.0\Hunting the Manticore.dll
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\bin\Debug\net6.0\Hunting the Manticore.pdb
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.dll
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\refint\Hunting the Manticore.dll
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.pdb
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\Hunting the Manticore.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\Hunting the Manticore\Hunting the Manticore\obj\Debug\net6.0\ref\Hunting the Manticore.dll
