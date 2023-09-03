@@ -1,7 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Runtime.InteropServices;
-
-Console.WriteLine("Hello, World!");
 int manticoreHealth = 10;
 int cityHealth  = 15;
 int round = 1;
@@ -50,16 +48,20 @@ void aimManticore(int manticorePosition, int cannonDamage)
     if (targetPosition == manticorePosition)
     {
         manticoreHealth -= cannonDamage;
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine($"You hit the manticore for {cannonDamage} damage.");
     }
     else if (manticorePosition < targetPosition)
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("You overshot!");
     }
     else if (manticorePosition > targetPosition)
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("You undershot!");
     }
+    Console.ForegroundColor = ConsoleColor.White;
 }
 
 int manticoreDistance = AskForNumberInRange("Player 1, choose a number from 0 to 100", 0, 100);
@@ -69,7 +71,9 @@ do
 {
     displayProgress();
     int cannonDamage = computeDamage(round);
+    Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine($"The cannon will do {cannonDamage} damage this round.");
+    Console.ForegroundColor = ConsoleColor.White;
     aimManticore(manticoreDistance, cannonDamage);
     cityHealth--;
     round++;
