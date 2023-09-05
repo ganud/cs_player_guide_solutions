@@ -1,14 +1,78 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.ComponentModel.DataAnnotations;
-
-Console.WriteLine("Hello, World!");
+﻿using System.ComponentModel.DataAnnotations;
+using System.Dynamic;
 
 arrowheadType head = arrowheadType.Steel;
 fletchingType fletch = fletchingType.Plastic;
-int len = 60;
 
-Arrow arrow = new Arrow(head, fletch, 60);
+getArrowHead();
+getFletch();
+int len = AskForNumberInRange("Enter a length between 60 and 100", 60, 100);
+
+Arrow arrow = new Arrow(head, fletch, len);
 Console.WriteLine(arrow.GetCost());
+
+int AskForNumber(string text)
+{
+    Console.WriteLine(text);
+    int converted = Convert.ToInt32(Console.ReadLine());
+    return converted;
+}
+
+int AskForNumberInRange(string text, int min, int max)
+{
+    int input = -1;
+    do
+    {
+        input = AskForNumber(text);
+    }
+    while (input < min || max < input);
+    return input;
+}
+
+void getArrowHead()
+{
+    Console.WriteLine("Enter arrow heads: steel, wood, or obsidian");
+    string input = Console.ReadLine();
+    Console.Clear();
+    switch (input)
+    {
+        case "steel":
+            head = arrowheadType.Steel;
+            break;
+        case "wood":
+            head = arrowheadType.Wood;
+            break;
+        case "obsidian":
+            head = arrowheadType.Obsidian;
+            break;
+        default:
+            Console.WriteLine("Invalid Input");
+            getArrowHead();
+            break;
+    }
+}
+void getFletch()
+{
+    Console.WriteLine("Enter fletch: plastic, turkey, or goose");
+    string input = Console.ReadLine();
+    Console.Clear();
+    switch (input)
+    {
+        case "plastic":
+            fletch = fletchingType.Plastic;
+            break;
+        case "turkey":
+            fletch = fletchingType.Turkey;
+            break;
+        case "goose":
+            fletch = fletchingType.Goose;
+            break;
+        default:
+            Console.WriteLine("Invalid Input");
+            getFletch();
+            break;
+    }
+}
 class Arrow
 {
 
@@ -77,6 +141,7 @@ class Arrow
     }
 }
 
+
 public enum arrowheadType
 {
     Steel,
@@ -90,3 +155,4 @@ public enum fletchingType
     Turkey,
     Goose,
 }
+
