@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
+using System.Security.Cryptography.X509Certificates;
 
 arrowheadType head = arrowheadType.Steel;
 fletchingType fletch = fletchingType.Plastic;
@@ -7,10 +8,8 @@ fletchingType fletch = fletchingType.Plastic;
 getArrowHead();
 getFletch();
 int len = AskForNumberInRange("Enter a length between 60 and 100", 60, 100);
-
 Arrow arrow = new Arrow(head, fletch, len);
 Console.WriteLine(arrow.GetCost());
-
 int AskForNumber(string text)
 {
     Console.WriteLine(text);
@@ -76,9 +75,9 @@ void getFletch()
 class Arrow
 {
 
-    public int _len;
-    public arrowheadType _head;
-    public fletchingType _fletch;
+    private int _len;
+    private arrowheadType _head;
+    private fletchingType _fletch;
 
     // Default arrow without user input
     public Arrow()
@@ -102,7 +101,18 @@ class Arrow
             _len = 100;
         }
     }
-
+    public int getArrowLength()
+    {
+        return _len;
+    }
+    public arrowheadType getArrowhead()
+    {
+        return _head;
+    }
+    public fletchingType getFletch()
+    {
+        return _fletch;
+    }
     public float GetCost()
     {
         float totalcost = 0; ;
