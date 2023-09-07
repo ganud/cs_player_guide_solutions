@@ -1,15 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
-using System.Security.Cryptography.X509Certificates;
+
 
 arrowheadType head = arrowheadType.Steel;
 fletchingType fletch = fletchingType.Plastic;
+// Switch statements branching from choices, run old code if custom.
+Console.WriteLine("Choose from Elite, Marksman, Beginner, or Custom arrow choices");
+string input = Console.ReadLine();
+//getArrowHead();
+//getFletch();
+Arrow elitearrow = Arrow.CreateMarksmanArrow();
+//int len = AskForNumberInRange("Enter a length between 60 and 100", 60, 100);
+//Arrow arrow = new Arrow(head, fletch, len);
+Console.WriteLine($"This arrow will cost {elitearrow.GetCost()} gold.");
 
-getArrowHead();
-getFletch();
-int len = AskForNumberInRange("Enter a length between 60 and 100", 60, 100);
-Arrow arrow = new Arrow(head, fletch, len);
-Console.WriteLine(arrow.GetCost());
 int AskForNumber(string text)
 {
     Console.WriteLine(text);
@@ -79,6 +83,18 @@ class Arrow
     private arrowheadType _head;
     private fletchingType _fletch;
 
+    public static Arrow CreateEliteArrow()
+    {
+        return new Arrow(arrowheadType.Steel, fletchingType.Plastic, 95);
+    }
+    public static Arrow CreateBeginnerArrow()
+    {
+        return new Arrow(arrowheadType.Wood, fletchingType.Goose, 75);
+    }
+    public static Arrow CreateMarksmanArrow()
+    {
+        return new Arrow(arrowheadType.Steel, fletchingType.Goose, 65);
+    }
     // Default arrow without user input
     public Arrow()
     {
@@ -101,17 +117,17 @@ class Arrow
             _len = 100;
         }
     }
-    public int getArrowLength()
+    public int Length
     {
-        return _len;
+        get => _len;
     }
-    public arrowheadType getArrowhead()
+    public arrowheadType Arrowhead
     {
-        return _head;
+        get => _head;
     }
-    public fletchingType getFletch()
+    public fletchingType Fletch
     {
-        return _fletch;
+        get => _fletch;
     }
     public float GetCost()
     {
