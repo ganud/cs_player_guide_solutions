@@ -7,12 +7,29 @@ fletchingType fletch = fletchingType.Plastic;
 // Switch statements branching from choices, run old code if custom.
 Console.WriteLine("Choose from Elite, Marksman, Beginner, or Custom arrow choices");
 string input = Console.ReadLine();
-//getArrowHead();
-//getFletch();
-Arrow elitearrow = Arrow.CreateMarksmanArrow();
-//int len = AskForNumberInRange("Enter a length between 60 and 100", 60, 100);
-//Arrow arrow = new Arrow(head, fletch, len);
-Console.WriteLine($"This arrow will cost {elitearrow.GetCost()} gold.");
+switch (input)
+{
+    case "elite":
+        Arrow eArrow = Arrow.CreateEliteArrow();
+        Console.WriteLine($"This arrow will cost {eArrow.GetCost()} gold.");
+        break;
+    case "marksman":
+        Arrow mArrow = Arrow.CreateMarksmanArrow();
+        Console.WriteLine($"This arrow will cost {mArrow.GetCost()} gold.");
+        break;
+    case "beginner":
+        Arrow bArrow = Arrow.CreateMarksmanArrow();
+        Console.WriteLine($"This arrow will cost {bArrow.GetCost()} gold.");
+        break;
+    case "custom":
+        int len = AskForNumberInRange("Enter a length between 60 and 100", 60, 100);
+        getArrowHead();
+        getFletch();
+        Arrow arrow = new Arrow(head, fletch, len);
+        Console.WriteLine($"This arrow will cost {arrow.GetCost()} gold.");
+        break;
+}
+
 
 int AskForNumber(string text)
 {
