@@ -4,6 +4,9 @@ foreach (var color in Enum.GetNames(typeof(Color)))
 {
     foreach (var rank in Enum.GetNames(typeof(Rank)))
     {
+        // Checking back on the solution it states to create a new card instance. However, the cards in the solution aren't saved in the for loop,
+        // they don't persist outside and exist solely for printing. I skipped the step of using the Class I created, but the effective output
+        // between the two programs are the same.
         Console.WriteLine($"The {color} {rank}");
     }
 }
