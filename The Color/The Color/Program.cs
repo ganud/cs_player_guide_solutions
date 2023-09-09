@@ -7,9 +7,9 @@ Console.WriteLine($"({random.R}, {random.G}, {random.B})");
 class Color
 {
     // Properties RGB
-    public int R { get; set; }
-    public int G { get; set; }
-    public int B { get; set; }
+    public int R { get;}
+    public int G { get;}
+    public int B { get;}
 
     // Constructors
     public Color()
