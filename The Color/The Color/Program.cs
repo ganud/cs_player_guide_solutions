@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Drawing;
-Color white = Color.White();
+Color white = Color.White;
 Console.WriteLine($"({white.R}, {white.G}, {white.B})");
 Color random = new Color(123,13,12);
 Console.WriteLine($"({random.R}, {random.G}, {random.B})");
@@ -28,38 +28,14 @@ class Color
 
     // Common colors factory
 
-    public static Color White()
-    {
-        return new Color(255, 255, 255);
-    }
-    public static Color Red()
-    {
-        return new Color(255, 0, 0);
-    }
-    public static Color Black()
-    {
-        return new Color(0, 0, 0);
-    }
-    public static Color Orange()
-    {
-        return new Color(255, 165, 0);
-    }
-    public static Color Yellow()
-    {
-        return new Color(255, 255, 0);
-    }
-    public static Color Green()
-    {
-        return new Color(0, 128, 0);
-    }
-    public static Color Blue()
-    {
-        return new Color(0, 0, 255);
-    }
-    public static Color Purple()
-    {
-        return new Color(128, 0, 128);
-    }
+    public static Color White { get; } = new Color(255, 255, 255);
+    public static Color Black { get; } = new Color(0, 0, 0);
+    public static Color Red { get; } = new Color(255, 0, 0);
+    public static Color Orange { get; } = new Color(255, 165, 0);
+    public static Color Yellow { get; } = new Color(255, 255, 0);
+    public static Color Green { get; } = new Color(0, 128, 0);
+    public static Color Blue { get; } = new Color(0, 0, 255);
+    public static Color Purple { get; } = new Color(128, 0, 128);
 
 
 }
