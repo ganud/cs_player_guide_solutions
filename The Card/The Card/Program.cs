@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+// Print all possible card variations with a nested loop.
 foreach (var color in Enum.GetNames(typeof(Color)))
 {
     foreach (var rank in Enum.GetNames(typeof(Rank)))
@@ -36,6 +37,8 @@ class Card
     }
 }
 
+
+// Enums
 enum Color
 {
     Red,
@@ -61,3 +64,6 @@ enum Rank
     Carrot,
     Ampersand,
 }
+
+// We used a color enumeration because we didn't need the complex inner workings of the RGB values of each color for this deck.
+// I'm just going to assume no one will draw a "The rgb(231, 13, 0) Dollar" and say it out loud. Just human readable names will do fine!
