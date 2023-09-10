@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\bin\Debug\net6.0\The Locked Door.exe
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\bin\Debug\net6.0\The Locked Door.deps.json
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\bin\Debug\net6.0\The Locked Door.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\bin\Debug\net6.0\The Locked Door.dll
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\bin\Debug\net6.0\The Locked Door.pdb
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.dll
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\refint\The Locked Door.dll
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.pdb
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\The Locked Door.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\The Locked Door\The Locked Door\obj\Debug\net6.0\ref\The Locked Door.dll
