@@ -23,7 +23,23 @@ while (true)
             door.ChangeCode(currentpasscode, newpasscode);
             Console.WriteLine(door.Passcode);
             break;
+        case 2:
+            door.openDoor();
+            break;
+        case 3:
+            door.closeDoor();
+            break;
+        case 4:
+            door.lockDoor();
+            break;
+        case 5:
+            door.unlockDoor();
+            break;
+        default:
+            Console.WriteLine("Invalid Command");
+            break;
     }
+
 }
 
 class Door
