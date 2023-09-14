@@ -1,0 +1,14 @@
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.AssemblyInfoInputs.cache
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.AssemblyInfo.cs
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.csproj.CoreCompileInputs.cache
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\bin\Debug\net6.0\Tic-Tac-Toe.exe
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\bin\Debug\net6.0\Tic-Tac-Toe.deps.json
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\bin\Debug\net6.0\Tic-Tac-Toe.runtimeconfig.json
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\bin\Debug\net6.0\Tic-Tac-Toe.dll
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\bin\Debug\net6.0\Tic-Tac-Toe.pdb
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.dll
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\refint\Tic-Tac-Toe.dll
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.pdb
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\Tic-Tac-Toe.genruntimeconfig.cache
+D:\Repos\cs_player_guide_solutions\Tic-Tac-Toe\Tic-Tac-Toe\obj\Debug\net6.0\ref\Tic-Tac-Toe.dll
