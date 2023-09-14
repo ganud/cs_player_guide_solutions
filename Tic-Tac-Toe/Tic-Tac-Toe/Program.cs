@@ -20,14 +20,14 @@ class TTTBoard
     public void printBoard()
     {
         // Code taken from a 2012 stack overflow answer with some edits https://stackoverflow.com/questions/12826760/printing-2d-array-in-matrix-format
-        Console.WriteLine("-------");
+        Console.WriteLine("-------------");
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
             {
-                Console.Write(string.Format("|{0}", Board[i, j]));
+                Console.Write(string.Format("| {0} ", Board[i, j]));
             }
-            Console.Write("|\n-------\n");
+            Console.Write("|\n-------------\n");
         }
     }
 }
