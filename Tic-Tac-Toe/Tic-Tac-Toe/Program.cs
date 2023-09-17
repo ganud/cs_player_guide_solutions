@@ -217,3 +217,7 @@ class Player
     }
 }
 
+//  Answer this question: How might you modify your completed program if running multiple rounds 
+// was a requirement (for example, a best-out-of-five series)?
+
+// The main logic in the while loop can be nested inside a for loop that repeats 5 times. Track the win count of the players at the end of each round, and compare at the end.
