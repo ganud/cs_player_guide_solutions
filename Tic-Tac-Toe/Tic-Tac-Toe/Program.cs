@@ -3,6 +3,7 @@
 
 using System.Data;
 using System.Diagnostics.Contracts;
+using System.Security.Cryptography;
 // While true
 // Prompt player 1's turn to the board with number commands, and replace with their symbol.
 // Prompt player 2 next
@@ -17,7 +18,13 @@ board.printBoard();
 while (true)
 {
     board.userToBoard(player1.Name, player1.Symbol);
+    Console.Clear();
     board.printBoard();
+    if (board.checkBoard(player1) == true) { break; }
+    board.userToBoard(player2.Name, player2.Symbol);
+    Console.Clear();
+    board.printBoard();
+    if (board.checkBoard(player2) == true) { break; }
 }
 
 
@@ -60,6 +67,7 @@ class TTTBoard
                 if (!Board[0, 0].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[0, 0] = symbol; }
                 break;
@@ -67,6 +75,7 @@ class TTTBoard
                 if (!Board[0, 1].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[0, 1] = symbol; }
                 break;
@@ -74,6 +83,7 @@ class TTTBoard
                 if (!Board[0, 2].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[0, 2] = symbol; }
                 break;
@@ -81,6 +91,7 @@ class TTTBoard
                 if (!Board[1, 0].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[1, 0] = symbol; }
                 break;
@@ -88,6 +99,7 @@ class TTTBoard
                 if (!Board[1, 1].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[1, 1] = symbol; }
                 break;
@@ -95,6 +107,7 @@ class TTTBoard
                 if (!Board[1, 2].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[1, 2] = symbol; }
                 break;
@@ -102,6 +115,7 @@ class TTTBoard
                 if (!Board[2, 0].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[2, 0] = symbol; }
                 break;
@@ -109,6 +123,7 @@ class TTTBoard
                 if (!Board[2, 1].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[2, 1] = symbol; }
                 break;
@@ -116,21 +131,87 @@ class TTTBoard
                 if (!Board[2, 2].Contains(" "))
                 {
                     Console.WriteLine("That tile is taken.");
+                    userToBoard(name, symbol);
                 }
                 else { Board[2, 2] = symbol; }
                 break;
+            default:
+                Console.WriteLine("Invalid position.");
+                userToBoard(name, symbol);
+                break;
+           
         }
     }
 
-    void inputTile(string coord, string symbol)
+    public Boolean checkBoard(Player player)
     {
-        Console.WriteLine(Board[0,0]);
-        Console.WriteLine("wefwejweif");
-        if (!coord.Contains(" "))
+        // Check rows
+        if (Board[0, 0] == player.Symbol && Board[0,1] == player.Symbol && Board[0, 2] == player.Symbol)
         {
-            Console.WriteLine("That tile is taken.");
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
         }
-        else { coord = symbol; }
+        else if (Board[1, 0] == player.Symbol && Board[1, 1] == player.Symbol && Board[1, 2] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+        else if (Board[2, 0] == player.Symbol && Board[2, 1] == player.Symbol && Board[2, 2] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+
+        // Check columns
+        else if (Board[0, 0] == player.Symbol && Board[1, 0] == player.Symbol && Board[2, 0] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+        else if (Board[0, 1] == player.Symbol && Board[1, 1] == player.Symbol && Board[2, 1] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+        else if (Board[0, 2] == player.Symbol && Board[1, 2] == player.Symbol && Board[2, 2] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+
+        // Check diagonals
+        else if (Board[0, 0] == player.Symbol && Board[1, 1] == player.Symbol && Board[2, 2] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+        else if (Board[0, 2] == player.Symbol && Board[1, 1] == player.Symbol && Board[2, 0] == player.Symbol)
+        {
+            Console.WriteLine($"{player.Name} has won.");
+            return true;
+        }
+        else
+        {
+            int count = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (!Board[i, j].Contains(" "))
+                    {
+                        count++;
+                    }
+                }
+            }
+
+           if (count == 9)
+            {
+                Console.WriteLine("This game is a tie");
+                return true
+                    ;
+            }
+        }
+        return false;
     }
 }
 
