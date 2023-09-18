@@ -1,53 +1,50 @@
 ﻿
 
-
-
-
-class Inventory
+class InventoryItem
 {
     public float Weight { get; private set; }
     public float Volume { get; private set; }
-    public Inventory()
+    public InventoryItem()
     {
         Weight = 0;
         Volume = 0;
     }
 }
 
-class Arrow : Inventory
+class Arrow : InventoryItem
 {
 
 }
 
-class Bow : Inventory
+class Bow : InventoryItem
 {
 
 }
 
-class Rope: Inventory
+class Rope: InventoryItem
 {
 
 }
 
-class Water : Inventory
-{
-
-
-}
-
-class Rations : Inventory
+class Water : InventoryItem
 {
 
 
 }
 
-class Sword : Inventory
+class Rations : InventoryItem
 {
 
 
 }
 
-class Pack
+class Sword : InventoryItem
+{
+
+
+}
+
+class Pack : InventoryItem
 {
 
 }
