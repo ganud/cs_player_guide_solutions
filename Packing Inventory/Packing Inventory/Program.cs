@@ -78,7 +78,7 @@ class Pack : InventoryItem
     public InventoryItem[] items { get;}
     public float maxWeight { get;}
     public float maxVolume { get;}
-    public float currentItems { get; private set;}
+    public int currentItems { get; private set;}
     public float currentWeight { get; private set; }
     public float currentVolume { get; private set; }
 
@@ -92,9 +92,19 @@ class Pack : InventoryItem
 
     public bool Add(InventoryItem item)
     {
-        // Get current weight/items
-        // For every item in the array, add weight and volume to a sum and return
-        return false;
+        // Check whether an item can be added so far.
+        if (currentItems >= items.Length) { Console.WriteLine("You are at max weight capacity"); return false; }
+        else if (maxWeight <= currentWeight + item.Weight) { Console.WriteLine("You are at max weight capacity"); return false; }
+        else if (maxVolume <= currentVolume + item.Volume) { Console.WriteLine("You are at max volume capacity"); return false; }
+        // Add the item
+        items[currentItems] = item;
+        currentItems++;
+
+        // Update currents
+        currentWeight += item.Weight;
+        currentVolume += item.Volume;
+
+        return true;
     }
 
 
