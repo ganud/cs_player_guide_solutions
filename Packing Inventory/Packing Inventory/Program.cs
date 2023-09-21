@@ -1,7 +1,7 @@
 ﻿
 using System.IO.Pipes;
 
-Pack backpack = new Pack(10, 50, 50);
+Pack backpack = new Pack(10, 50, 20);
 while (true)
 {
     backpack.packStatus();
@@ -26,6 +26,8 @@ while (true)
             "5" => new Rations(),
             "6" => new Sword(),
         };
+        Console.WriteLine(item.ToString());
+        Console.WriteLine(backpack.ToString());
         backpack.Add(item);
     }
     else
@@ -106,7 +108,7 @@ class Sword : InventoryItem
 
 }
 
-class Pack : InventoryItem
+class Pack
 {
     public InventoryItem[] items { get;}
     public float maxWeight { get;}
@@ -147,5 +149,17 @@ class Pack : InventoryItem
         Console.WriteLine($"Weight: {currentWeight}/{maxWeight}");
         Console.WriteLine($"Volume: {currentVolume}/{maxVolume}");
     }
+    public override string ToString()
+    {
+        string packstring = "Your items: ";
+        for (int i = 0; i < currentItems; i++)
+        {
+            packstring += items[i].ToString() + " ";
+        }
+
+        return packstring;
+    }
 
 }
+
+// I've decided not to override ToString for the item subclasses, since they perform what's intended out the box.
