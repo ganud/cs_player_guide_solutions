@@ -5,10 +5,11 @@ using System.Reflection.Metadata.Ecma335;
 Robot bot = new Robot();
 for (int i = 0; i < bot.Commands.Length; i++)
 {
-    Console.WriteLine("Enter a command");
+    Console.WriteLine("Enter a command:");
+    Console.WriteLine("- on\n- off\n- N\n- W\n- E\n- S");
     RobotCommand command = Console.ReadLine() switch
     {
-        "on" => new Oncommand(),
+        "on" => new OnCommand(),
         "off" => new OffCommand(),
         "N" => new NorthCommand(),
         "W" => new WestCommand(),
@@ -43,7 +44,7 @@ public abstract class RobotCommand
     }
 }
 
-public class Oncommand : RobotCommand
+public class OnCommand : RobotCommand
 {
     public override void Run(Robot robot)
     {
