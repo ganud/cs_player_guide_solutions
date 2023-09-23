@@ -7,7 +7,7 @@ for (int i = 0; i < bot.Commands.Length; i++)
 {
     Console.WriteLine("Enter a command:");
     Console.WriteLine("- on\n- off\n- N\n- W\n- E\n- S");
-    RobotCommand command = Console.ReadLine() switch
+    IRobotCommand command = Console.ReadLine() switch
     {
         "on" => new OnCommand(),
         "off" => new OffCommand(),
@@ -25,10 +25,10 @@ public class Robot
     public int X { get; set; }
     public int Y { get; set; }
     public bool IsPowered { get; set; }
-    public RobotCommand?[] Commands { get; } = new RobotCommand?[3];
+    public IRobotCommand[] Commands { get; } = new IRobotCommand[3];
     public void Run()
     {
-        foreach (RobotCommand? command in Commands)
+        foreach (IRobotCommand? command in Commands)
         {
             command?.Run(this);
             Console.WriteLine($"[{X} {Y} {IsPowered}]");
@@ -36,32 +36,29 @@ public class Robot
     }
 }
 
-public abstract class RobotCommand
+public interface IRobotCommand
 {
-    public virtual void Run(Robot robot)
-    {
-
-    }
+    public void Run(Robot robot);
 }
 
-public class OnCommand : RobotCommand
+public class OnCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         robot.IsPowered = true;
     }
 }
-public class OffCommand : RobotCommand
+public class OffCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         robot.IsPowered = false;
     }
 }
 
-public class NorthCommand : RobotCommand
+public class NorthCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
         {
@@ -70,9 +67,9 @@ public class NorthCommand : RobotCommand
     }
 }
 
-public class SouthCommand : RobotCommand
+public class SouthCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
         {
@@ -81,9 +78,9 @@ public class SouthCommand : RobotCommand
     }
 }
 
-public class WestCommand : RobotCommand
+public class WestCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
         {
@@ -92,9 +89,9 @@ public class WestCommand : RobotCommand
     }
 }
 
-public class EastCommand : RobotCommand
+public class EastCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot)
     {
         if (robot.IsPowered)
         {
@@ -102,3 +99,8 @@ public class EastCommand : RobotCommand
         }
     }
 }
+
+// Answer this question: Do you feel this is an improvement over using an abstract base class? Why 
+// or why not?
+
+// I think is is an improvement in terms of readability. Interfaces are more explicitly named in what the inheriting class MUST have(e.g the run command). In abstract, you only get the keyword.
