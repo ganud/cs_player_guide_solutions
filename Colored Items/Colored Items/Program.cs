@@ -1,7 +1,7 @@
 ﻿
-ColoredItem<Sword> coloredsword = new ColoredItem<Sword>(ConsoleColor.Green, new Sword());
-ColoredItem<Bow> coloredbow = new ColoredItem<Bow>(ConsoleColor.Blue, new Bow());
-ColoredItem<Axe> coloredaxe = new ColoredItem<Axe>(ConsoleColor.Red, new Axe());
+ColoredItem<Sword> coloredsword = new ColoredItem<Sword>(ConsoleColor.Blue, new Sword());
+ColoredItem<Bow> coloredbow = new ColoredItem<Bow>(ConsoleColor.Red, new Bow());
+ColoredItem<Axe> coloredaxe = new ColoredItem<Axe>(ConsoleColor.Green, new Axe());
 
 coloredsword.Display();
 coloredbow.Display();
