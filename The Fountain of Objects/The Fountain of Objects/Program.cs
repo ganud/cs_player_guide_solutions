@@ -160,6 +160,10 @@ public class Player : Map
             case "move east":
                 if (moveEast() == false) { getMove(); }
                 break;
+            case "help":
+                GameController.getHelp();
+                getMove();
+                break;
             case "enable fountain":
                 if (Board[Row, Col] == "fountain" && FountainisOn == false)
                 {
@@ -259,8 +263,8 @@ public class GameController
     public static void Intro()
     {
         Console.ForegroundColor = ConsoleColor.Magenta;
-        Console.WriteLine("You enter the Fountain of Objects. The fountain is in disrepair, and powers the City.");
-        Console.WriteLine("Navigate the catacombs, repair the fountain, and get out of there ASAP.");
+        Console.WriteLine("You enter the Cavern of Objects, a maze of rooms filled with dangerous pits in search\r\nof the Fountain of Objects.\r\nLight is visible only in the entrance, and no other light is seen anywhere in the caverns.\r\nYou must navigate the Caverns with your other senses.\r\nFind the Fountain of Objects, activate it, and return to the entrance");
+        Console.WriteLine("Look out for pits. You will feel a breeze if a pit is in an adjacent room. If you enter a room with a pit, you will die.");
         Console.ForegroundColor = ConsoleColor.White;
     }
 
@@ -276,5 +280,14 @@ public class GameController
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("Your story meets an abrupt end. R.I.P city dwellers.");
         Console.ForegroundColor = ConsoleColor.White;
+    }
+
+    public static void getHelp() {
+        Console.WriteLine("Commands");
+        Console.WriteLine("move north" +
+            "\nmove east" +
+            "\nmove south" +
+            "\nmove west" +
+            "\nenable fountain");
     }
 }
