@@ -6,13 +6,20 @@ GameController.Intro();
 player.chooseBoard();
 while (true)
 {
-    if (player.gameOver == true)
+    if (player.gameOver == true || player.deathByPit == true)
     {
         break;
     }
     player.playTurn();
 }
-GameController.Ending();
+if (player.gameOver == true)
+{
+    GameController.Ending();
+}
+else if (player.deathByPit == true)
+{
+    GameController.BadEnding();
+}
 // Player has a row and column value, alterable by functions
 // Those values are used to index the board
 // If the string in the board has a specific value, do something.
@@ -21,7 +28,7 @@ public class Map
 {
     protected string[,] Board = {
         {"entrance" ," " ,"fountain", " " }, // Row 0
-        {" " ," " ," " , " "},  // Row 1                                    
+        {" " ," " ,"pit" , " "},  // Row 1                                    
         {" " ," " ," " , " " }, // Row 2
         { " ", " ", " ", " " }, // Row 3
     };
@@ -35,6 +42,8 @@ public class Player : Map
     public int Col { get; private set; } = 0;
 
     public bool gameOver { get; private set; }
+    public bool deathByPit { get; private set; }
+
 
     private int mapSize = 3;
     public void chooseBoard()
@@ -50,8 +59,8 @@ public class Player : Map
                 string[,] BoardcopyM =
                 {
                     {"entrance", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", "fountain", " ", " "},
+                    {" ", " ", " ", " ", "pit", " "},
+                    {" ", "pit", " ", "fountain", " ", " "},
                     {" ", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " "},
@@ -64,11 +73,11 @@ public class Player : Map
                 {
                     {"entrance", " ", " ", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", "pit", " ", " ", " "},
+                    {" ", "pit", " ", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", "fountain", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", "pit", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " ", " ", " "},
                 };
                 Board = BoardcopyL;
@@ -83,6 +92,7 @@ public class Player : Map
     public void playTurn()
     {
         Console.WriteLine("----------------------------------------");
+        checkAdjacentPit();
         reportPosition();
         reportSense();
         getMove();
@@ -122,11 +132,18 @@ public class Player : Map
             Console.WriteLine("You see light coming from the cavern entrance.");
             Console.ForegroundColor = ConsoleColor.White;
         }
+        else if (Board[Row, Col] == "pit")
+        {
+            deathByPit = true;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("You fell into a pit!");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 
     public void getMove()
     {
-        if (gameOver) { return; }
+        if (gameOver || deathByPit) { return; }
         Console.WriteLine("What do you want to do?\n----------------------------------------");
         string command = Console.ReadLine();
         switch (command)
@@ -206,6 +223,35 @@ public class Player : Map
         Row = Row + 1;
         return true;
     }
+
+    private bool checkAdjacentPit()
+    {
+        int xlower = Col - 1; 
+        int xupper = Col + 1;
+        int ylower = Row - 1; // error if below 0
+        int yupper = Row + 1; // error if above max
+
+        // Fixes indexes if they go outside board
+        if (ylower < 0) { ylower++; }
+        if (yupper > mapSize) { yupper--; }
+        if (xlower < 0) { xlower++; }
+        if (xupper > mapSize) { xupper--; }
+
+        for ( var  i = xlower; i <= xupper; i++)
+        {
+            for (var j = ylower; j <= yupper; j++)
+            {
+                if (Board[j, i] == "pit")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You feel a draft. There is a pit in a nearby room.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
 
 public class GameController
@@ -225,4 +271,10 @@ public class GameController
         Console.ForegroundColor = ConsoleColor.White;
     }
 
+    public static void BadEnding()
+    {
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine("Your story meets an abrupt end. R.I.P city dwellers.");
+        Console.ForegroundColor = ConsoleColor.White;
+    }
 }
