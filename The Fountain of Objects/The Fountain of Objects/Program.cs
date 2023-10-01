@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.InteropServices;
 Player player = new Player();
 GameController.Intro();
+player.chooseBoard();
 while (true)
 {
     if (player.gameOver == true)
@@ -34,12 +35,51 @@ public class Player : Map
     public int Col { get; private set; } = 0;
 
     public bool gameOver { get; private set; }
-    public void reportPosition()
-    {
-        Console.WriteLine($"You are in the room at (Row={Row},  Column={Col}).");
-        // Check position in board, if something portray a sense.
-    }
 
+    private int mapSize = 3;
+    public void chooseBoard()
+    {
+        Console.WriteLine("Choose a board size from small, medium, or large");
+        string size = Console.ReadLine();
+        switch (size)
+        {
+            case "small":
+                mapSize = 3;
+                break;
+            case "medium":
+                string[,] BoardcopyM =
+                {
+                    {"entrance", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", "fountain", " ", " "},
+                    {" ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " "},
+                };
+                Board = BoardcopyM;
+                mapSize = 5;
+                break;
+            case "large":
+                string[,] BoardcopyL =
+                {
+                    {"entrance", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", "fountain", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                };
+                Board = BoardcopyL;
+                mapSize = 7;
+                break;
+            default:
+                Console.WriteLine("Not a valid size");
+                chooseBoard();
+                break;
+        }
+    }
     public void playTurn()
     {
         Console.WriteLine("----------------------------------------");
@@ -47,6 +87,12 @@ public class Player : Map
         reportSense();
         getMove();
     }
+    public void reportPosition()
+    {
+        Console.WriteLine($"You are in the room at (Row={Row},  Column={Col}).");
+        // Check position in board, if something portray a sense.
+    }
+
     public void reportSense()
     {
         if (Board[Row,Col] == " ")
@@ -122,7 +168,7 @@ public class Player : Map
     // If player is outside board, reject movement and prompt again.
     public bool moveEast()
     {
-        if (Col + 1 > 3)
+        if (Col + 1 > mapSize)
         {
             Console.WriteLine("You can't move outside the board");
             return false;
@@ -152,7 +198,7 @@ public class Player : Map
     }
     public bool moveSouth()
     {
-        if (Row + 1 < 0)
+        if (Row + 1 > mapSize)
         {
             Console.WriteLine("You can't move outside the board");
             return false;
@@ -175,7 +221,7 @@ public class GameController
     public static void Ending()
     {
         Console.ForegroundColor = ConsoleColor.Magenta;
-        Console.WriteLine("You reactivted the fountain and remained intact. You win!");
+        Console.WriteLine("You reactivated the fountain and remained intact. You win!");
         Console.ForegroundColor = ConsoleColor.White;
     }
 
