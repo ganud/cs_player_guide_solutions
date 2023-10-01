@@ -7,11 +7,11 @@ while (true)
 {
     if (player.gameOver == true)
     {
-        Console.WriteLine("You escaped the catacombs with the fountain reactivated.");
         break;
     }
     player.playTurn();
 }
+GameController.Ending();
 // Player has a row and column value, alterable by functions
 // Those values are used to index the board
 // If the string in the board has a specific value, do something.
@@ -45,7 +45,6 @@ public class Player : Map
         Console.WriteLine("----------------------------------------");
         reportPosition();
         reportSense();
-        Console.WriteLine("----------------------------------------");
         getMove();
     }
     public void reportSense()
@@ -56,11 +55,15 @@ public class Player : Map
         }
         else if (Board[Row, Col] == "fountain" && FountainisOn == false)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("You hear water dripping in this room. The Fountain of Objects is here!");
+            Console.ForegroundColor = ConsoleColor.White;
         }
         else if (Board[Row, Col] == "fountain" && FountainisOn == true)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("You hear the rushing waters from the Fountain of Objects. It has been reactivated!");
+            Console.ForegroundColor = ConsoleColor.White;
         }
         else if (Board[Row, Col] == "entrance" && FountainisOn == true)
         {
@@ -69,13 +72,16 @@ public class Player : Map
         }
         else if (Board[Row, Col] == "entrance")
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("You see light coming from the cavern entrance.");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 
     public void getMove()
     {
-        Console.WriteLine("What do you want to do?");
+        if (gameOver) { return; }
+        Console.WriteLine("What do you want to do?\n----------------------------------------");
         string command = Console.ReadLine();
         switch (command)
         {
@@ -160,8 +166,17 @@ public class GameController
 {
     public static void Intro()
     {
+        Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("You enter the Fountain of Objects. The fountain is in disrepair, and powers the City.");
         Console.WriteLine("Navigate the catacombs, repair the fountain, and get out of there ASAP.");
+        Console.ForegroundColor = ConsoleColor.White;
+    }
+
+    public static void Ending()
+    {
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine("You reactivted the fountain and remained intact. You win!");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
 }
