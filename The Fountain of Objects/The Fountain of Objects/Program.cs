@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
 Player player = new Player();
 GameController.Intro();
 player.chooseBoard();
@@ -59,7 +61,7 @@ public class Player : Map
                 string[,] BoardcopyM =
                 {
                     {"entrance", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", "pit", " "},
+                    {" ", "maelstrom", " ", " ", "pit", " "},
                     {" ", "pit", " ", "fountain", " ", " "},
                     {" ", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " "},
@@ -72,9 +74,9 @@ public class Player : Map
                 string[,] BoardcopyL =
                 {
                     {"entrance", " ", " ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", "maelstrom", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", "pit", " ", " ", " "},
-                    {" ", "pit", " ", " ", " ", " ", " ", " "},
+                    {" ", "pit", " ", "maelstrom", " ", " ", " ", " "},
                     {" ", " ", " ", " ", "fountain", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", "pit", " ", " ", " "},
@@ -92,7 +94,7 @@ public class Player : Map
     public void playTurn()
     {
         Console.WriteLine("----------------------------------------");
-        checkAdjacentPit();
+        checkAdjacents();
         reportPosition();
         reportSense();
         getMove();
@@ -105,6 +107,16 @@ public class Player : Map
 
     public void reportSense()
     {
+        // Check maelstrom first, since repositioning can trigger the new room's effects
+        if (Board[Row, Col] == "maelstrom")
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("A maelstrom moves you!");
+            maelstromReposition(Row, Col);
+            reportPosition();
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
         if (Board[Row,Col] == " ")
         {
             Console.WriteLine("You sense nothing in particular in this room");
@@ -139,11 +151,12 @@ public class Player : Map
             Console.WriteLine("You fell into a pit!");
             Console.ForegroundColor = ConsoleColor.White;
         }
+
     }
 
     public void getMove()
     {
-        if (gameOver || deathByPit) { return; }
+        if (gameOver || deathByPit) { return; } // Close immediately if game is over
         Console.WriteLine("What do you want to do?\n----------------------------------------");
         string command = Console.ReadLine();
         switch (command)
@@ -228,7 +241,28 @@ public class Player : Map
         return true;
     }
 
-    private bool checkAdjacentPit()
+    private void maelstromReposition(int Row, int Col)
+    {
+        // Move player designated spaces
+        moveNorth();
+        moveEast();
+        moveEast();
+
+        // Remove maelstrom from current position 
+        Board[Row, Col] = " ";
+
+        // Calculate appropriate maelstrom index
+        if (Row + 1 > mapSize) { Row = mapSize; }
+        else { Row = Row + 1;}
+
+        if ( Col - 2 < 0) { Col = 0; }
+        else { Col = Col - 2; }
+
+        // Update the maelstrom position
+        Board[Row, Col] = "maelstrom";
+    }
+
+    private bool checkAdjacents()
     {
         int xlower = Col - 1; 
         int xupper = Col + 1;
@@ -251,6 +285,12 @@ public class Player : Map
                     Console.WriteLine("You feel a draft. There is a pit in a nearby room.");
                     Console.ForegroundColor = ConsoleColor.White;
                     return true;
+                }
+                if (Board[j, i] == "maelstrom")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You hear the growling and groaning of a maelstrom nearby.");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
         }
