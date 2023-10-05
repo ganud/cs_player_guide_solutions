@@ -43,6 +43,7 @@ public class Player : Map
     private int Row { get; set; } = 0;
     private int Col { get; set; } = 0;
 
+    private int Arrows = 5;
     public bool gameOver { get; private set; }
     public bool dead { get; private set; }
 
@@ -201,6 +202,7 @@ public class Player : Map
                 }
                 break;
             case "shoot north":
+                shootNorth();
                 break;
             default:
                 Console.WriteLine("Not a valid command");
@@ -310,6 +312,29 @@ public class Player : Map
             }
         }
         return false;
+    }
+    
+    private void shootNorth()
+    {
+        int Rowcopy = Row;
+        if (Arrows == 0) { Console.WriteLine("You have no arrows."); return; }
+        if (Rowcopy - 1 < 0)
+        {
+            Console.WriteLine("You shot at the wall. Why?");
+            Arrows--;
+        }
+        else
+        {
+            Rowcopy = Rowcopy - 1;
+            if (Board[Rowcopy,Col] == "maelstrom" || Board[Rowcopy, Col] == "amarok")
+            {
+                Board[Rowcopy, Col] = " ";
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("You hit something. Whatever you hit no longer bothers you.");
+            }
+            else { Console.WriteLine("You hit nothing."); }
+            Arrows--;
+        }
     }
 }
 
