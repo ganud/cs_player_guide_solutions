@@ -8,7 +8,7 @@ GameController.Intro();
 player.chooseBoard();
 while (true)
 {
-    if (player.gameOver == true || player.deathByPit == true)
+    if (player.gameOver == true || player.dead == true)
     {
         break;
     }
@@ -18,7 +18,7 @@ if (player.gameOver == true)
 {
     GameController.Ending();
 }
-else if (player.deathByPit == true)
+else if (player.dead == true)
 {
     GameController.BadEnding();
 }
@@ -29,7 +29,7 @@ else if (player.deathByPit == true)
 public class Map
 {
     protected string[,] Board = {
-        {"entrance" ," " ,"fountain", " " }, // Row 0
+        {"entrance" ,"amarok" ,"fountain", " " }, // Row 0
         {" " ," " ,"pit" , " "},  // Row 1                                    
         {" " ," " ," " , " " }, // Row 2
         { " ", " ", " ", " " }, // Row 3
@@ -44,7 +44,7 @@ public class Player : Map
     public int Col { get; private set; } = 0;
 
     public bool gameOver { get; private set; }
-    public bool deathByPit { get; private set; }
+    public bool dead { get; private set; }
 
 
     private int mapSize = 3;
@@ -64,8 +64,8 @@ public class Player : Map
                     {" ", "maelstrom", " ", " ", "pit", " "},
                     {" ", "pit", " ", "fountain", " ", " "},
                     {" ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " "},
+                    {" ", " ", "amarok", " ", " ", " "},
+                    {" ", " ", " ", " ", " ", "amarok"},
                 };
                 Board = BoardcopyM;
                 mapSize = 5;
@@ -73,12 +73,12 @@ public class Player : Map
             case "large":
                 string[,] BoardcopyL =
                 {
-                    {"entrance", " ", " ", " ", " ", " ", " ", " "},
+                    {"entrance", " ", " ", " ", "amarok", " ", " ", " "},
                     {" ", " ", "maelstrom", " ", " ", " ", " ", " "},
-                    {" ", " ", " ", " ", "pit", " ", " ", " "},
+                    {" ", " ", " ", " ", "pit", " ", "amarok", " "},
                     {" ", "pit", " ", "maelstrom", " ", " ", " ", " "},
                     {" ", " ", " ", " ", "fountain", " ", " ", " "},
-                    {" ", " ", " ", " ", " ", " ", " ", " "},
+                    {" ", " ", "amarok", " ", " ", " ", " ", " "},
                     {" ", " ", " ", " ", "pit", " ", " ", " "},
                     {" ", " ", " ", " ", " ", " ", " ", " "},
                 };
@@ -146,9 +146,16 @@ public class Player : Map
         }
         else if (Board[Row, Col] == "pit")
         {
-            deathByPit = true;
+            dead = true;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("You fell into a pit!");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        else if (Board[Row, Col] == "amarok")
+        {
+            dead = true;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("An amarok turns you into a snack!");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
@@ -156,7 +163,7 @@ public class Player : Map
 
     public void getMove()
     {
-        if (gameOver || deathByPit) { return; } // Close immediately if game is over
+        if (gameOver || dead) { return; } // Close immediately if game is over
         Console.WriteLine("What do you want to do?\n----------------------------------------");
         string command = Console.ReadLine();
         switch (command)
@@ -290,6 +297,12 @@ public class Player : Map
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("You hear the growling and groaning of a maelstrom nearby.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                if (Board[j, i] == "amarok")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You can smell the rotten stench of an amarok nearby.");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
             }
