@@ -40,8 +40,8 @@ public class Map
 
 public class Player : Map
 {
-    public int Row { get; private set; } = 0;
-    public int Col { get; private set; } = 0;
+    private int Row { get; set; } = 0;
+    private int Col { get; set; } = 0;
 
     public bool gameOver { get; private set; }
     public bool dead { get; private set; }
@@ -99,13 +99,13 @@ public class Player : Map
         reportSense();
         getMove();
     }
-    public void reportPosition()
+    private void reportPosition()
     {
         Console.WriteLine($"You are in the room at (Row={Row},  Column={Col}).");
         // Check position in board, if something portray a sense.
     }
 
-    public void reportSense()
+    private void reportSense()
     {
         // Check maelstrom first, since repositioning can trigger the new room's effects
         if (Board[Row, Col] == "maelstrom")
@@ -161,7 +161,7 @@ public class Player : Map
 
     }
 
-    public void getMove()
+    private void getMove()
     {
         if (gameOver || dead) { return; } // Close immediately if game is over
         Console.WriteLine("What do you want to do?\n----------------------------------------");
@@ -200,6 +200,8 @@ public class Player : Map
                     Console.WriteLine("Can't do this right now.");
                 }
                 break;
+            case "shoot north":
+                break;
             default:
                 Console.WriteLine("Not a valid command");
                 getMove();
@@ -207,7 +209,7 @@ public class Player : Map
         }
     }
     // If player is outside board, reject movement and prompt again.
-    public bool moveEast()
+    private bool moveEast()
     {
         if (Col + 1 > mapSize)
         {
@@ -217,7 +219,7 @@ public class Player : Map
         Col = Col + 1;
         return true;
     }
-    public bool moveWest()
+    private bool moveWest()
     {
         if (Col - 1 < 0)
         {
@@ -227,7 +229,7 @@ public class Player : Map
         Col = Col - 1;
         return true;
     }
-    public bool moveNorth()
+    private bool moveNorth()
     {
         if (Row - 1 < 0)
         {
@@ -237,7 +239,7 @@ public class Player : Map
         Row = Row - 1;
         return true;
     }
-    public bool moveSouth()
+    private bool moveSouth()
     {
         if (Row + 1 > mapSize)
         {
