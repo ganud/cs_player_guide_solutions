@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+
 int manticoreHealth = 10;
 int cityHealth  = 15;
 int round = 1;
@@ -64,7 +66,29 @@ void aimManticore(int manticorePosition, int cannonDamage)
     Console.ForegroundColor = ConsoleColor.White;
 }
 
-int manticoreDistance = AskForNumberInRange("Player 1, choose a number from 0 to 100", 0, 100);
+int manticoreDistance = 0;
+
+do
+{
+    Console.WriteLine("singleplayer or multiplayer?");
+    string choice = Console.ReadLine();
+    switch (choice)
+    {
+        case "singleplayer":
+            Random random = new Random();
+            manticoreDistance = random.Next(0, 100);
+            break;
+        case "multiplayer":
+            manticoreDistance = AskForNumberInRange("Player 1, choose a number from 0 to 100", 0, 100);
+            break;
+        default:
+            Console.WriteLine("Invalid command");
+            break;
+
+    }
+}
+while (manticoreDistance == 0);
+
 Console.Clear();
 
 do
