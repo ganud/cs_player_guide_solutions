@@ -103,6 +103,7 @@ public class Player : Map
     private void reportPosition()
     {
         Console.WriteLine($"You are in the room at (Row={Row},  Column={Col}).");
+        Console.WriteLine($"You have {Arrows} arrows.");
         // Check position in board, if something portray a sense.
     }
 
@@ -203,6 +204,15 @@ public class Player : Map
                 break;
             case "shoot north":
                 shootNorth();
+                break;
+            case "shoot south":
+                shootSouth();
+                break;
+            case "shoot east":
+                shootEast();
+                break;
+            case "shoot west":
+                shootWest();
                 break;
             default:
                 Console.WriteLine("Not a valid command");
@@ -331,6 +341,76 @@ public class Player : Map
                 Board[Rowcopy, Col] = " ";
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("You hit something. Whatever you hit no longer bothers you.");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else { Console.WriteLine("You hit nothing."); }
+            Arrows--;
+        }
+    }
+    private void shootSouth()
+    {
+        int Rowcopy = Row;
+        if (Arrows == 0) { Console.WriteLine("You have no arrows."); return; }
+        if (Rowcopy + 1 > mapSize)
+        {
+            Console.WriteLine("You shot at the wall. Why?");
+            Arrows--;
+        }
+        else
+        {
+            Rowcopy = Rowcopy + 1;
+            if (Board[Rowcopy, Col] == "maelstrom" || Board[Rowcopy, Col] == "amarok")
+            {
+                Board[Rowcopy, Col] = " ";
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("You hit something. Whatever you hit no longer bothers you.");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else { Console.WriteLine("You hit nothing."); }
+            Arrows--;
+        }
+    }
+    private void shootEast()
+    {
+        int Colcopy = Col;
+        if (Arrows == 0) { Console.WriteLine("You have no arrows."); return; }
+        if (Colcopy + 1 > mapSize)
+        {
+            Console.WriteLine("You shot at the wall. Why?");
+            Arrows--;
+        }
+        else
+        {
+            Colcopy = Colcopy + 1;
+            if (Board[Row, Colcopy] == "maelstrom" || Board[Row, Colcopy] == "amarok")
+            {
+                Board[Row, Colcopy] = " ";
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("You hit something. Whatever you hit no longer bothers you.");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else { Console.WriteLine("You hit nothing."); }
+            Arrows--;
+        }
+    }
+    private void shootWest()
+    {
+        int Colcopy = Col;
+        if (Arrows == 0) { Console.WriteLine("You have no arrows."); return; }
+        if (Colcopy - 1 < 0)
+        {
+            Console.WriteLine("You shot at the wall. Why?");
+            Arrows--;
+        }
+        else
+        {
+            Colcopy = Colcopy - 1;
+            if (Board[Row, Colcopy] == "maelstrom" || Board[Row, Colcopy] == "amarok")
+            {
+                Board[Row, Colcopy] = " ";
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("You hit something. Whatever you hit no longer bothers you.");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             else { Console.WriteLine("You hit nothing."); }
             Arrows--;
