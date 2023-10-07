@@ -76,7 +76,7 @@ do
     {
         case "singleplayer":
             Random random = new Random();
-            manticoreDistance = random.Next(0, 100);
+            manticoreDistance = random.Next(0, 101);
             break;
         case "multiplayer":
             manticoreDistance = AskForNumberInRange("Player 1, choose a number from 0 to 100", 0, 100);
@@ -113,3 +113,6 @@ else
 {
     Console.WriteLine("Player 1 wins! The city is destroyed.");
 }
+
+// With polymorphism, we can have the same game start using the core code, but with dialogue tweaks specific to singleplayer or multiplayer, which I didn't implement.
+// Currently, I didn't put the game logic into a function, but if I did, polymorphism would've been my go to after the player entered thir choice.
