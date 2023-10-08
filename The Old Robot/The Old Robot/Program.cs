@@ -3,20 +3,42 @@ using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 
 Robot bot = new Robot();
-for (int i = 0; i < bot.Commands.Length; i++)
+bool commandsOpen = true;
+while (commandsOpen)
 {
     Console.WriteLine("Enter a command:");
-    Console.WriteLine("- on\n- off\n- N\n- W\n- E\n- S");
-    IRobotCommand command = Console.ReadLine() switch
+    Console.WriteLine("- on\n- off\n- N\n- W\n- E\n- S\n- stop");
+
+    IRobotCommand command = null;
+    string userCommand = Console.ReadLine();
+    switch (userCommand)
     {
-        "on" => new OnCommand(),
-        "off" => new OffCommand(),
-        "N" => new NorthCommand(),
-        "W" => new WestCommand(),
-        "E" => new EastCommand(),
-        "S" => new SouthCommand(),
-    };
-    bot.Commands[i] = command;
+        case "on":
+            command = new OnCommand();
+            break;
+        case "off":
+            command = new OffCommand();
+            break;
+        case "E":
+            command = new EastCommand();
+            break;
+        case "W":
+            command = new WestCommand();
+            break;
+        case "N":
+            command = new NorthCommand();
+            break;
+        case "S":
+            command = new SouthCommand();
+            break;
+        case "stop":
+            commandsOpen = false;
+            break;
+    }
+    if (command != null)
+    {
+        bot.Commands.Add(command);
+    }
 }
 
 bot.Run();
@@ -25,7 +47,7 @@ public class Robot
     public int X { get; set; }
     public int Y { get; set; }
     public bool IsPowered { get; set; }
-    public IRobotCommand[] Commands { get; } = new IRobotCommand[3];
+    public List<IRobotCommand> Commands { get; } = new List<IRobotCommand>();
     public void Run()
     {
         foreach (IRobotCommand? command in Commands)

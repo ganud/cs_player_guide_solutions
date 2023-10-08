@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
-
+DateTime timeStart = DateTime.Now;
 Player player = new Player();
 GameController.Intro();
 player.chooseBoard();
@@ -22,9 +22,9 @@ else if (player.dead == true)
 {
     GameController.BadEnding();
 }
-// Player has a row and column value, alterable by functions
-// Those values are used to index the board
-// If the string in the board has a specific value, do something.
+DateTime timeEnd = DateTime.Now;
+TimeSpan timeElapsed = timeEnd - timeStart;
+Console.WriteLine(($"Time elapsed: {timeElapsed.Days}d {timeElapsed.Hours}h {timeElapsed.Minutes}m {timeElapsed.Seconds}s"));
 
 public class Map
 {
