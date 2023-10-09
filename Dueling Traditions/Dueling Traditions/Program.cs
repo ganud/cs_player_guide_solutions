@@ -30,3 +30,7 @@
         }
     }
 }
+
+// I prefer top-level statements. We're going to almost always type the basic boilerplate, so why not abstract it away?
+// I see the merit in multiple files however. The main method is small, and the types are thw real meat that should be analyzed as its own package.
+// I wished I read about the SOLID principles earlier so I didn't throw in every responsibility imaginable to the Player class.
