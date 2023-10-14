@@ -1,27 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Random rand = new Random();
-
-// Print 10 random floating point numbers 
-Console.WriteLine("Printing 10 random floating point numbers");
-
+﻿Random rand = new Random();
+Console.WriteLine(rand.NextDouble(12));
 public static class RandomExtension
 {
-    public static double NextDouble(int max = 1)
+    public static double NextDouble(this Random random, int max = 1)
     {
-        Random random = new Random();
         return random.NextDouble() * max;
     }
-    public static string RandString(params string[] strings)
+    public static string RandString(this Random random, params string[] strings)
     {
-        Random rand = new Random();
-        int randIndex = rand.Next(0, strings.Length);
+        int randIndex = random.Next(0, strings.Length);
         return strings[randIndex];
     }
 
-    public static bool CoinFlip(double prob = 0.5)
+    public static bool CoinFlip(this Random random, double prob = 0.5)
     {
-        Random rand = new Random();
-        return rand.NextDouble() > prob;
+        return random.NextDouble() > prob;
     }
 }
