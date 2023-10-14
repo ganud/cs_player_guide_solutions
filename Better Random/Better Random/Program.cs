@@ -16,3 +16,6 @@ public static class RandomExtension
         return random.NextDouble() < probHeads;
     }
 }
+
+// Extension methods seem better. They appear to support overload(?), so there isn't naming collisions with extended fuctions that share the same name. 
+// If it's adding functionality to a single class, than I rather keep using that class rather than create a new one.
