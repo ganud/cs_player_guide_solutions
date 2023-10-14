@@ -1,10 +1,4 @@
-﻿using System.Collections.Generic;
-
-Random rand = new Random();
-for (int i = 0; i < 10; i++)
-{
-    Console.WriteLine(rand.CoinFlip(0.2));
-}
+﻿
 public static class RandomExtension
 {
     public static double NextDouble(this Random random, int max = 1)
