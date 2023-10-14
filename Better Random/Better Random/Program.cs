@@ -12,8 +12,8 @@ public static class RandomExtension
         return strings[randIndex];
     }
 
-    public static bool CoinFlip(this Random random, double prob = 0.5)
+    public static bool CoinFlip(this Random random, double probHeads = 0.5)
     {
-        return random.NextDouble() > prob;
+        return random.NextDouble() > probHeads;
     }
 }
