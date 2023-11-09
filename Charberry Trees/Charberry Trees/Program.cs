@@ -26,12 +26,8 @@ public class CharberryTree
 
 public class Notifier
 {
-    private void OnTreeRipened() => NotifyRipened();
+    private void OnTreeRipened() { Console.WriteLine("The fruit is ripe!"); }
     
-    public void NotifyRipened()
-    {
-        Console.WriteLine("The fruit is ripe!");
-    }
     public Notifier(CharberryTree tree)
     {
         tree.Ripened += OnTreeRipened;
