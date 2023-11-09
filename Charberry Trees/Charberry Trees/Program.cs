@@ -1,5 +1,7 @@
 ﻿CharberryTree tree = new CharberryTree();
 Notifier notifier = new Notifier(tree);
+Harvester harvester = new Harvester(tree);
+
 while (true)
 {
     tree.MaybeGrow();
@@ -39,14 +41,15 @@ public class Notifier
 public class Harvester
 
 {
-    private void OnTreeRipened() => HarvestFruit();
-    public void HarvestFruit(CharberryTree tree)
+    private CharberryTree _tree;
+    private void OnTreeRipened()
     {
         Console.WriteLine("Fruit harvested.");
-        tree.Ripe = false;
+        _tree.Ripe = false;
     }
     public Harvester(CharberryTree tree)
     {
-        tree.Ripened
+        _tree = tree;
+        _tree.Ripened += OnTreeRipened;
     }
 }
