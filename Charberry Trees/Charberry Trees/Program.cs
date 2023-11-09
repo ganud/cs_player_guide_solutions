@@ -49,3 +49,4 @@ public class Harvester
         _tree.Ripened += OnTreeRipened;
     }
 }
+

@@ -4,17 +4,17 @@ Console.WriteLine("2 - Positive");
 Console.WriteLine("3 - Multiples of 10");
 string input = Console.ReadLine();
 
-Sieve sieve = new Sieve(IsEven);
+Sieve sieve = new Sieve(n => n % 2 == 0);
 
 switch (input) {
     case "1":
-        sieve = new Sieve(IsEven);
+        sieve = new Sieve(n => n % 2 == 0);
         break;
     case "2":
-        sieve = new Sieve(IsPositive);
+        sieve = new Sieve(n => n > 0);
         break;
     case "3":
-        sieve = new Sieve(IsMultipleOf10);
+        sieve = new Sieve(n => n % 10 == 0);
         break;
 }
 while (true)
@@ -27,20 +27,7 @@ while (true)
     }
     else { Console.WriteLine("bad!"); }
 }
-bool IsEven(int number)
-{
-    return (number % 2 == 0);
-}
 
-bool IsPositive(int number)
-{
-    return (number > 0);
-}
-
-bool IsMultipleOf10(int number)
-{
-    return (number % 10 == 0);
-}
 public class Sieve
 {
     private Func<int, bool> filter;
