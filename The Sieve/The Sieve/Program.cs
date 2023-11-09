@@ -47,3 +47,9 @@ public class Sieve
 
 // Have a parent class with an abstract method, and have deriving classes implement the method with overrides.
 // Inheritence and polymorphism seem more straightforward. You make the rules to what is implemented, and those rules remind you what to add.
+
+
+// • Answer this question: Does this change make the program shorter or longer?
+// Shorter. We lose the extra lines needed for a named function
+// Answer this question: Does this change make the program easier to read or harder?
+// Harder. We lose the benefits of a named function. However, it's easy to infer a lambda from a single line or comment.
